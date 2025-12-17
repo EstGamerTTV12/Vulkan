@@ -431,3 +431,21 @@ class VEmbeds:
             colour=self.__colors.RED
         )
         return embed
+
+    def WEB_PREVIEW(self, url: str, title: str, description: str | None) -> Embed:
+        preview_description = description if description is not None else 'No description found on the page.'
+        embed = Embed(
+            title='Web Preview',
+            description=f'**{title}**\n{preview_description}',
+            colour=self.__colors.BLUE
+        )
+        embed.add_field(name='URL', value=url, inline=False)
+        return embed
+
+    def WEB_PREVIEW_ERROR(self) -> Embed:
+        embed = Embed(
+            title='Web Preview',
+            description='Unable to reach this URL right now. Check the address and try again.',
+            colour=self.__colors.RED
+        )
+        return embed
