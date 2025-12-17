@@ -52,5 +52,8 @@ class Helper(Singleton):
             self.HELP_CARA = 'Return cara or coroa.'
             self.HELP_CARA_LONG = 'Return cara or coroa.'
 
+            self.HELP_BROWSE = 'Fetch a quick preview of a webpage.'
+            self.HELP_BROWSE_LONG = 'Fetch the title and description of a webpage.\\n\\nArguments: Full or partial URL to visit.'
+
             self.SLASH_QUEUE_DESCRIPTION = f'Number of queue page, there is only {config.MAX_SONGS_IN_PAGE} musics by page'
             self.SLASH_MOVE_HELP = 'Moves a song from position pos1 to pos2 in queue.'
